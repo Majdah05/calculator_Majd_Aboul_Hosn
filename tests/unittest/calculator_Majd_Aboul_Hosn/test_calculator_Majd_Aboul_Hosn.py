@@ -27,14 +27,20 @@ class TestCalculator(unittest.TestCase):
 
     def test_modulus(self):
         self.assertEqual(modulus(10, 3), 1)
-        with self.assertRaises(ValueError):
+        self.assertEqual(modulus(10, 2), 0)
+        self.assertEqual(modulus(-10, 3), 2)
+        with self.assertRaises(ZeroDivisionError):
             modulus(10, 0)
 
     def test_power(self):
         self.assertEqual(power(2, 3), 8)
+        self.assertEqual(power(5, 0), 1)
+        self.assertEqual(power(2, -1), 0.5)
 
     def test_square_root(self):
         self.assertEqual(square_root(25), 5)
+        self.assertEqual(square_root(0), 0)
+        self.assertAlmostEqual(square_root(2), 1.4142135623730951)
         with self.assertRaises(ValueError):
             square_root(-1)
 

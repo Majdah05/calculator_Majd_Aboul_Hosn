@@ -31,8 +31,9 @@ python -m unittest -v tests.unittest.calculator_Majd_Aboul_Hosn.test_calculator_
 
 The calculator package in `src/main/python` contains seven functions. Addition,
 subtraction, multiplication, division, modulus, and power use Python operators.
-Square root uses `math.sqrt`. Division and modulus reject a zero divisor with
-`ValueError`; square root rejects negative inputs with `ValueError`. Power
+Square root uses `math.sqrt`. Division rejects a zero divisor with `ValueError`;
+modulus raises `ZeroDivisionError` for a zero divisor. Square root rejects
+negative inputs with `ValueError`. Power
 follows Python's `**` behavior, including `0 ** 0 == 1` and `ZeroDivisionError`
 for zero raised to a negative exponent.
 

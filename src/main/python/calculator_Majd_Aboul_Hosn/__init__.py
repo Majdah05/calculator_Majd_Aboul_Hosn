@@ -21,7 +21,7 @@ def divide(x, y):
 
 def modulus(x, y):
     if y == 0:
-        raise ValueError("Cannot calculate modulus with zero divisor.")
+        raise ZeroDivisionError("Cannot calculate modulus with zero divisor.")
     return x % y
 
 
