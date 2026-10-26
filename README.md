@@ -36,8 +36,8 @@ Square root uses `math.sqrt`. Division and modulus reject a zero divisor with
 follows Python's `**` behavior, including `0 ** 0 == 1` and `ZeroDivisionError`
 for zero raised to a negative exponent.
 
-The test module contains 21 tests covering all seven operations, negative
-numbers, zeros, fractional values, and invalid inputs. The empty `__init__.py`
+The test module contains seven tests, one for each calculator operation.
+Division, modulus, and square root also check invalid inputs within their tests. The empty `__init__.py`
 files in the test folders let Python import the tests using the handout's
 dotted module command.
 
